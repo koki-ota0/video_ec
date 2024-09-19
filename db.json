@@ -1,0 +1,86 @@
+{
+    "films":
+    [
+        {
+            "id": 1,
+            "title": "Top Gun Marvrick",
+            "image": "/images/movie1.jpg",
+            "genre": "Action",
+            "videoUrl": "https://www.youtube.com/watch?v=qSqVVswa420",
+            "video": "videos/Top Gun： Maverick - Official Trailer (2022) - Paramount Pictures.mp4"
+        },
+        {
+            "id": 2,
+            "title": "Spider Man No Way Home",
+            "image": "/images/movie2.jpg",
+            "genre": "Hero",
+            "videoUrl": "https://www.youtube.com/watch?v=rt-2cxAiPJk",
+            "video": "videos/SPIDER-MAN： NO WAY HOME - Official Teaser Trailer (HD).mp4"
+        },
+        {
+            "id": 3,
+            "title": "Black Adam",
+            "image": "/images/movie3.jpg",
+            "genre": "Action",
+            "videoUrl": "https://www.youtube.com/watch?v=X0tOpBuYasI",
+            "video": "videos/Black Adam – Official Trailer 1.mp4"
+        },
+        {
+            "id": 4,
+            "title": "Dr. Strange: Multiverse of Madness",
+            "image": "/images/movie4.jpg",
+            "genre": "Horror",
+            "videoUrl": "https://www.youtube.com/watch?v=aWzlQ2N6qqg",
+            "video": "videos/Marvel Studios' Doctor Strange in the Multiverse of Madness ｜ Official Trailer.mp4"
+        },
+        {
+            "id": 5,
+            "title": "すずめの戸締まり",
+            "image": "/images/movie5.jpg",
+            "genre": "Anime",
+            "videoUrl": "https://www.youtube.com/watch?v=F7nQ0VUAOXg",
+            "video": "videos/『すずめの戸締まり』予告.mp4"
+        },
+        {
+            "id": 6,
+            "title": "Bullet Train",
+            "image": "/images/movie6.jpg",
+            "genre": "Action",
+            "videoUrl": "https://www.youtube.com/watch?v=0IOsk2Vlc4o",
+            "video": "videos/BULLET TRAIN - Official Trailer (HD).mp4"
+        },
+        {
+            "id": 7,
+            "title": "HELL DOGS",
+            "image": "/images/movie7.jpg",
+            "genre": "Yakuza",
+            "videoUrl": "https://www.youtube.com/watch?v=DqIDujormDg",
+            "video": "videos/ヘルドッグス　本予告.mp4"
+        },
+        {
+            "id": 8,
+            "title": "Black Panther",
+            "image": "/images/movie8.jpg",
+            "genre": "Hero",
+            "videoUrl": "https://www.youtube.com/watch?v=dxWvtMOGAhw",
+            "video": "videos/Black Panther Teaser Trailer [HD].mp4"
+        },
+        {
+            "id": 9,
+            "title": "Jurassic Park",
+            "image": "/images/movie9.jpg",
+            "genre": "Horror",
+            "videoUrl": "https://www.youtube.com/watch?v=lc0UehYemQA",
+            "video": "videos/Jurassic Park Trailer.mp4"
+
+        },
+        {
+            "id": 10,
+            "title": "Avater: The Way of Water",
+            "image": "/images/movie10.jpg",
+            "genre": "Adventure",
+            "videoUrl": "https://www.youtube.com/watch?v=d9MyW72ELq0",
+            "video": "videos/Avatar： The Way of Water ｜ Official Trailer.mp4"
+        }
+    ]
+}
