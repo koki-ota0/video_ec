@@ -1,6 +1,7 @@
-import MovieList from '../components/movieList';  // 作成したコンポーネントをインポート
-import { Movie } from '../types/movie';  // types/movie.tsx で定義した Movie インターフェースをインポート
-
+// app/page.tsx は、ページのコンポーネントを定義するファイルです。
+import MovieList from '@/components/organisms/MovieList';
+import FeaturedMovie from '@/components/organisms/FeaturedMovie';
+import { Movie } from '@/types/movie';  
 
 export default async function Home() {
   const response = await fetch('http://localhost:3001/films', {
@@ -8,35 +9,23 @@ export default async function Home() {
       'Cache-Control': 'no-cache',
     },
   });
-  let movies: Movie[]
-  const data = await response.json();
-  movies = data;
-  console.log(movies);
-
-  // const clear_cart = () => {
-  //   fetch('http://localhost:3001/cart/clear', {
-  //     method: 'DELETE',
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //     });
-  // }
+  const movies: Movie[] = await response.json();
+  const featuredMovie = movies[0]; // 先頭の映画を注目の映画として表示
 
   return (
-    <div className="movies container" id="movies">
-      <div className="heading">
-        <h1 className="heading-title">Movies</h1>
+    <>
+      <FeaturedMovie movie={featuredMovie} />
+      <div className="movies" id="movies">
+        <MovieList movies={movies} />
+        <div className="heading" id="trending">
+          <h2 className="heading-title">Trending</h2>
+        </div>
+        <MovieList movies={movies} />
+        <div className="heading" id="explore">
+          <h2 className="heading-title">Explore</h2>
+        </div>
+        <MovieList movies={movies} />
       </div>
-      <MovieList movies={movies} />
-      <div className="heading" id="trending">
-        <h2 className="heading-title">Trending</h2>
-      </div>
-      <MovieList movies={movies} />
-      <div className="heading" id="explore">
-        <h2 className="heading-title">Explore</h2>
-      </div>
-      <MovieList movies={movies} />
-    </div>
+    </>
   );
 }
