@@ -38,12 +38,11 @@ body {
 }
 
 .container {
-  display: flex;
+  display: block;
   width: 100%;
-  max-width: 1060px;
   /* ページの最大幅 */
-  margin: auto;
-  margin-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 header {

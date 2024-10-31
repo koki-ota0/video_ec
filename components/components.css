@@ -1,7 +1,6 @@
 /* Movies */
 .movies {
     width: 100%;
-    margin-top: 400px;
     /* FeaturedMovie の高さ分下げる */
     padding-top: 20px;
 }
@@ -47,7 +46,8 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
+
 .movie-card:hover {
     transform: scale(1.05);
 }
@@ -79,7 +79,8 @@
     color: white;
     padding: 10px;
     text-align: center;
-  }
+}
+
 .movie-title {
     margin: 0;
     /* マージンをリセット */
@@ -91,36 +92,75 @@
     /* タイトルと評価の間にスペースを追加 */
     font-size: 14px;
 }
+/* 親コンテナ */
+.featured-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
 
+/* 背景用の固定コンテナ */
 .featured-background {
     position: fixed;
     top: 60px;
-    width: 100%;
-    max-width: 1020px;
     height: 400px;
     overflow: hidden;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: -1;
-}
-.featured-background img, 
-.featured-background video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    justify-content: center; /* 上下中央に配置 */
 }
 
-/* オーバーレイ部分 */
-.featured-overlay {
-    position: absolute; /* コンテナ内に絶対配置 */
-    top: 60px;
+/* 画像と動画のスタイル */
+.featured-video,
+.featured-image {
     width: 100%;
-    max-width: 1020px;
-    height: 400px;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* 前面のオーバーレイ */
+.featured-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    margin: 20px
+}
+
+/* オーバーレイのコンテンツ */
+.overlay-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 左揃え */
+    color: #fff;
+    gap: 10px; /* タイトルとボタンの間隔 */
+    margin-left: 30px;
+    margin-top: 150px;
+}
+
+/* タイトルのスタイル */
+.movie-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* 再生ボタン */
+.play-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer; /* ホバーでポインタ表示 */
+    transition: background 0.3s;
 }
