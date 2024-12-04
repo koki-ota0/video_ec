@@ -8,8 +8,10 @@
 
 ```bash
 npm install
+npm run json-server
 npm run dev
 ```
-ラウザで [http://localhost:3000](http://localhost:3000) を開いて、結果を確認してください。
+http://localhost:3001で仮のデータベース(db.json)にアクセスすることができます
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いて、結果を確認してください。
 
 app/page.tsx を編集することで、ページの内容を変更できます。ファイルを編集すると、ページが自動的に更新されます。
